@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background-color: #05060a;
+  color: #e8eaf2;
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(168, 85, 247, 0.35);
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #05060a;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #38bdf8, #a855f7);
+  border-radius: 999px;
+}
+
+@layer components {
+  .glass {
+    @apply border border-white/10 bg-white/[0.03] backdrop-blur-xl;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent-fs via-indigo-400 to-accent-ai bg-clip-text text-transparent;
+  }
+  .section-pad {
+    @apply mx-auto w-full max-w-6xl px-6 py-24 md:px-10;
+  }
+}
+
+.grid-bg {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 30%, transparent 75%);
+}
+
+.glow-ring {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 20px 60px -20px rgba(56, 189, 248, 0.35);
+}

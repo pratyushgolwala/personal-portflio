@@ -16,7 +16,7 @@ export default function Hero({ mode }: { mode: Mode }) {
       </div>
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ink-950" />
 
-      <div className="section-pad relative z-10 pt-28">
+      <div className="section-pad relative z-10 pt-20 sm:pt-28">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -34,13 +34,13 @@ export default function Hero({ mode }: { mode: Mode }) {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-7xl"
+          className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
         >
           {profile.name.split(" ")[0]}{" "}
           <span className="text-gradient">{profile.name.split(" ")[1]}</span>
         </motion.h1>
 
-        <div className="mt-4 h-9 overflow-hidden">
+        <div className="mt-4 min-h-[2.5rem] overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.p
               key={persona.title}
@@ -48,11 +48,11 @@ export default function Hero({ mode }: { mode: Mode }) {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -30, opacity: 0 }}
               transition={{ duration: 0.45, ease: "easeOut" }}
-              className="flex items-baseline gap-3 text-lg font-semibold sm:text-2xl"
+              className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-lg font-semibold sm:text-2xl"
               style={{ color: accent }}
             >
               {persona.title}
-              <span className="text-xs font-medium uppercase tracking-wider text-white/40">
+              <span className="text-[10px] font-medium uppercase tracking-wider text-white/40 sm:text-xs">
                 {persona.tagline}
               </span>
             </motion.p>

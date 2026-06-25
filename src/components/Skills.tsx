@@ -24,7 +24,7 @@ export default function Skills({ mode }: { mode: Mode }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+            className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3"
           >
             {groups.map((g, gi) => (
               <motion.div

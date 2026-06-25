@@ -56,7 +56,7 @@ function ProjectCard({
       transition={{ delay: index * 0.08, duration: 0.6 }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-7 transition-all hover:-translate-y-1.5"
+      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition-all hover:-translate-y-1.5 sm:p-7"
       style={{ boxShadow: hover ? `0 24px 60px -24px ${accent}66` : undefined }}
     >
       <div
